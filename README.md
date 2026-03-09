@@ -45,3 +45,11 @@ Supported Algorithms
 | 🟠 Orange  | Key Element / Pivot       |
 | 🟢 Green   | Sorted Elements           |
 | 🟩 Lime    | Sorting Completed         |
+
+ Future Improvements
+
+Some ideas for future updates:
+	•	Add Radix Sort
+	•	Add Counting Sort
+	•	Add Shell Sort
+	
