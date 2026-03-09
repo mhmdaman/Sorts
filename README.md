@@ -16,3 +16,32 @@ iv)Random array generator
 v)Color-coded visualization system
 vi)Binary heap tree visualization for Heap Sort
 vii)Fun UI animations and visual feedback
+
+Supported Algorithms
+
+| Algorithm       | Type               | Best Case | Average Case | Worst Case |
+|-----------------|--------------------|-----------|--------------|------------|
+| Bubble Sort     | Comparison Based   | O(n)      | O(n²)        | O(n²)      |
+| Selection Sort  | Comparison Based   | O(n²)     | O(n²)        | O(n²)      |
+| Insertion Sort  | Comparison Based   | O(n)      | O(n²)        | O(n²)      |
+| Merge Sort      | Divide & Conquer   | O(n log n)| O(n log n)   | O(n log n) |
+| Quick Sort      | Divide & Conquer   | O(n log n)| O(n log n)   | O(n²)      |
+| Heap Sort       | Heap Based         | O(n log n)| O(n log n)   | O(n log n) |
+
+ How to Use
+
+1)Generate a random array using New Array
+2)Choose a sorting algorithm from the dropdown
+3)Adjust the speed slider if needed
+4)Click Start Sorting
+5)Watch the sorting process visually step-by-step
+
+## 🎨 Visualization Guide
+
+| Color      |          Meaning          |
+|------------|---------------------------|
+| 🔵 Blue    | Unsorted Elements         |
+| 🔴 Red     | Elements Being Compared   |
+| 🟠 Orange  | Key Element / Pivot       |
+| 🟢 Green   | Sorted Elements           |
+| 🟩 Lime    | Sorting Completed         |
