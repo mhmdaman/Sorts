@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort it</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="cloud">☁️</div>
+<div class="cloud">☁️</div>
+<div class="cloud">☁️</div>
+<div class="cloud">☁️</div>
+
+<h1><span class="doodle-guy">🌝</span>SortS</h1>
+<p class="subtitle">See the Sort magic show!!!</p>
+
+<div id="controls">
+    <select id="algorithm" onchange="showdescription(); toggleLegend();">
+        <option value="bubble">Bubble Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="heap">Heap Sort</option>
+    </select>
+
+    <button id="btn-generate" onclick="generateArray()">New Array</button>
+    <button id="btn-sort" onclick="startSorting()">▶ Start Sorting!</button>
+
+    <div class="speed-wrap">
+        ⚡ Speed
+        <input type="range" id="speed" min="100" max="2900" value="700" step="100">
+    </div>
+</div>
+
+<div id="step-panel">
+    <p id="step-text">Select an algorithm and click Start Sorting!</p>
+</div>
+
+<p id="description"></p>
+
+<div id="arena">
+    <div id="array-container"></div>
+</div>
+
+<div class="legend" id="legend-bars">
+    <div class="legend-item"><div class="legend-dot" style="background:#29b6f6"></div> Unsorted</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f44336"></div> Comparing</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ff9800"></div> Key Element</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4caf50"></div> Sorted ✅</div>
+</div>
+
+
+<div class="legend" id="legend-heap" style="display:none;">
+    <div class="legend-item"><div class="legend-dot" style="background:#29b6f6; border-radius:50%;"></div> Heap Node</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ff9800; border-radius:50%;"></div> Parent (swapping)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f44336; border-radius:50%;"></div> Child (swapping)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4caf50; border-radius:50%;"></div> Extracted ✅</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8bc34a; border-radius:50%;"></div> Done 🎉</div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    function toggleLegend() {
+        const algo = document.getElementById("algorithm").value;
+        document.getElementById("legend-bars").style.display = algo === "heap" ? "none" : "flex";
+        document.getElementById("legend-heap").style.display = algo === "heap" ? "flex" : "none";
+    }
+</script>
+</body>
+</html>
